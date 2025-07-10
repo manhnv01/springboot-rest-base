@@ -1,0 +1,46 @@
+package io.github.manhnv01.springbootrestbase.exceptions;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.http.HttpStatus;
+
+import java.util.Date;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class ExceptionResponse {
+  private Integer status;
+  private Date timestamp;
+  private String message;
+  private String messageCode;
+  private String description;
+  private String path;
+
+  public ExceptionResponse(
+      HttpStatus status, Date timestamp, String message, String description, String path) {
+    super();
+    this.status = status.value();
+    this.timestamp = timestamp;
+    this.message = message;
+    this.description = description;
+    this.path = path;
+  }
+
+  public ExceptionResponse(
+      HttpStatus status,
+      Date timestamp,
+      String message,
+      String messageCode,
+      String description,
+      String path) {
+    super();
+    this.status = status.value();
+    this.timestamp = timestamp;
+    this.message = message;
+    this.messageCode = messageCode;
+    this.description = description;
+    this.path = path;
+  }
+}
