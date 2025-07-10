@@ -1,6 +1,6 @@
 package io.github.manhnv01.springbootrestbase.exceptions;
 
-import io.github.manhnv01.springbootrestbase.constants.Constant;
+import io.github.manhnv01.springbootrestbase.common.Constant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
