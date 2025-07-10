@@ -39,7 +39,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         ExceptionResponse body = new ExceptionResponse(
                 INTERNAL_SERVER_ERROR,
                 new Date(),
-                BusinessMessage.INTERNAL_SERVER_ERROR.val,
+                ExceptionMessage.INTERNAL_SERVER_ERROR.val,
                 ex.getMessage(),
                 path
         );
